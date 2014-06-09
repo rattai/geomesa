@@ -189,7 +189,7 @@ class MapReduceAccumuloFeatureStore(dataStore: MapReduceAccumuloDataStore,
     job.getConfiguration.set(DEFAULT_FEATURE_NAME, featureName)
     job.getConfiguration.set(INGEST_TABLE_NAME, tableName)
 
-    // hack around hsqldb version conflicts between gt-epsg-hsql 11.0 & hadoop 0.20.2
+    // hack around hsqldb version conflicts between gt-epsg-wkt 11.0 & hadoop 0.20.2
     job.getConfiguration.set(MAPRED_CLASSPATH_USER_PRECEDENCE_KEY, "true")
 
     job.setOutputFormatClass(classOf[AccumuloFileOutputFormat])
